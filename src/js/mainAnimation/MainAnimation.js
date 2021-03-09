@@ -17,7 +17,7 @@ export default class MainAnimation {
     this.particles = [];
 
     this.currentBehavior = behaviorDefault;
-    this.currentModel = dino4627;
+    this.currentModel = wsLogo;
 
     this.config(settings);
 

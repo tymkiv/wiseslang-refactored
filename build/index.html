@@ -13,9 +13,9 @@
     <!-- BEGIN content -->
     <div class="out">
       <div class="btn-group">
-        <button class="btn js-btn-1">ws (369 natural coords)</button>
-        <button class="btn js-btn-2">dino (925 natural coords) </button>
-        <button class="btn js-btn-3">dino (4627 natural coords) </button>
+        <button class="btn js-btn-model active" data-model="ws-logo">ws (369 natural coords)</button>
+        <button class="btn js-btn-model" data-model="dino-925">dino (925 natural coords) </button>
+        <button class="btn js-btn-model" data-model="dino-4627">dino (4627 natural coords) </button>
       </div>
       <div id="root"></div>
       <style>
@@ -41,6 +41,11 @@
           padding: 10px;
           color: #fff;
           background-color: tomato;
+        }
+
+        .btn.active
+        {
+          background-color: green;
         }
 
       </style>

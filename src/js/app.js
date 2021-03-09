@@ -5,6 +5,10 @@ sayHello();
 const container = document.getElementById('root');
 const mainAnimation = new MainAnimation(container);
 
-document.querySelector('.js-btn-1').addEventListener('click', () => mainAnimation.changeModel('ws-logo'))
-document.querySelector('.js-btn-2').addEventListener('click', () => mainAnimation.changeModel('dino-925'))
-document.querySelector('.js-btn-3').addEventListener('click', () => mainAnimation.changeModel('dino-4627'))
+const btns = [...document.querySelectorAll('.js-btn-model')];
+btns.forEach(btn => btn.addEventListener('click', e => {
+  btns.forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  const model = e.target.getAttribute('data-model');
+  mainAnimation.changeModel(model);
+}))
